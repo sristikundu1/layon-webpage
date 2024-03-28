@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layon-Webflow Ecommerce Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        @keyframes slideLeft {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .carousel-slider {
+            display: flex;
+            width: fit-content;
+            /* Ensures the container only takes as much space as needed */
+            animation: slideLeft 20s linear infinite;
+
+        }
+
+        .carousel-slider img {
+            flex-shrink: 0;
+            /* Prevent images from shrinking */
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header class="fixed w-full top-0 z-20 ">
+        <!-- navbar  -->
+        <section class="max-w-3xl mx-auto sticky my-5 border rounded-full  bg-white shadow-xl z-10">
+            <nav class=" flex justify-evenly items-center py-2">
+                <img class="h-6" src="./assets/logo.png" alt="">
+
+                <ul class="flex gap-8 items-center">
+                    <li>HOME</li>
+                    <li>FEATURES</li>
+                    <li class="font-medium">ABOUT</li>
+                    <li>PAGES</li>
+                    <li>SHOP</li>
+                </ul>
+
+                <button class="bg-[#ef476f] text-white rounded-full py-1 px-5 btn">SALES</button>
+
+                <div class="flex ">
+                    <img class="h-5 w-5" src="./assets/cart.png" alt="">
+                    <button class="bg-black rounded-full text-white px-2 ml-1 btn ">0</button>
+                </div>
+
+            </nav>
+        </section>
+
+
+    </header>
+
+    <div class="  ">
+        <!-- banner  -->
+        <section class="bg-[#eff2f1]">
+
+            <h2 class="text-center text-8xl font-bold pt-44">Resource <span
+                    class="bg-gradient-to-r from-[#ff8800] to-[#ef476f] text-transparent bg-clip-text">sharing</span>
+                <br>
+                within the company
+            </h2>
+
+            <p class="text-center text-2xl mt-5 text-[#454955]">Lyon keeps your team&apos;s work on-brand, on message,
+                and
+                <br> on time. Innovative features make work feel effortless.
+            </p>
+
+            <div class="flex justify-center items-center gap-8 mt-12 text-white">
+                <button class="btn bg-gradient-to-b from-[#d62839] to-[#ef476f] rounded-full text-xl py-2 px-5">Talk to
+                    Sales</button>
+                <button class="btn bg-black rounded-full text-xl py-2 px-5">Careers</button>
+            </div>
+
+        </section>
+
+        <!-- image  -->
+
+        <section class="bg-gradient-to-b from-[#eff2f1] via-[#ee6c4d] to-[#fdfffc] ">
+            <div class="overflow-hidden relative pt-16 pb-24">
+                <div class="flex items-center gap-10 pt-10 carousel-slider">
+                    <!-- img1  -->
+                    <img class="rounded-lg w-96 object-cover" src="./assets/img1.jpg" alt="img1">
+                    <!-- img2  -->
+                    <img class="rounded-lg w-96 h-[410px] object-cover" src="./assets/img2.jpg" alt="img2">
+                    <!-- img3  -->
+                    <img class="rounded-lg w-96 object-cover" src="./assets/img3.jpg" alt="img3">
+                    <!-- img4  -->
+                    <img class="rounded-lg w-96 h-[410px] object-cover" src="./assets/img4.jpg" alt="img4">
+                    <!-- img5  -->
+                    <img class="rounded-lg w-96 object-cover" src="./assets/img5.jpg" alt="img5">
+                    <!-- img6  -->
+                    <img class="rounded-lg w-96 object-cover" src="./assets/img1.jpg" alt="img1">
+                    <!-- img7  -->
+                    <img class="rounded-lg w-96 h-[410px] object-cover" src="./assets/img2.jpg" alt="img2">
+
+
+                </div>
+
+                <!-- <div class="slider">
+                <ul>
+                    <li>
+                        <img class="rounded-lg w-96  object-cover mr-10" src="./assets/img1.jpg" alt="img1">
+                    </li>
+                    <li>
+                        <img class="rounded-lg w-96 object-cover mr-10"  src="./assets/img2.jpg" alt="img2">
+                    </li>
+                    <li>
+                        <img class="rounded-lg w-96  object-cover mr-10"  src="./assets/img3.jpg" alt="img3">
+                    </li>
+                    <li>
+                        <img class="rounded-lg w-96 object-cover mr-10"  src="./assets/img4.jpg" alt="img4">
+                    </li>
+                    <li>
+                        <img class="rounded-lg w-96 object-cover mr-10"  src="./assets/img5.jpg" alt="img5">
+                    </li>
+    
+                    <li>
+                        <img class="rounded-lg w-96 object-cover mr-10" src="./assets/img1.jpg" alt="img1">
+                    </li>
+                    <li>
+                        <img class="rounded-lg w-96 object-cover mr-10"  src="./assets/img2.jpg" alt="img2">
+                    </li>
+                    <li>
+                        <img class="rounded-lg w-96 object-cover mr-10"  src="./assets/img3.jpg" alt="img3">
+                    </li>
+                    <li>
+                        <img class="rounded-lg w-96 object-cover mr-10"  src="./assets/img4.jpg" alt="img4">
+                    </li>
+                    <li>
+                        <img class="rounded-lg w-96 object-cover mr-10"  src="./assets/img5.jpg" alt="img5">
+                    </li>
+                </ul>
+               </div> -->
+
+            </div>
+
+        </section>
+
+        <!-- earth  -->
+
+        <section class="bg-[#fdfffc] py-16">
+            <h2 class="font-bold text-6xl text-center text-[#00171f]">We are based on earth</h2>
+            <p class="text-center mt-6 text-[#454955] mb-14">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor <br> incididunt ut labore et dolore magna aliqua.</p>
+
+            <div class="max-w-6xl mx-auto ">
+                <div class="flex gap-5 relative">
+                    <img class="rounded-lg w-[500px] object-cover" src="./assets/earth1.jpg" alt="">
+                    <img class="rounded-lg w-[630px] object-cover" src="./assets/earth2.jpg" alt="">
+                   
+                    <button class="w-64 py-3 absolute flex gap-3 items-center justify-start pl-4 bg-white text-[#454955] border rounded-xl text-2xl left-[550px] top-[340px]"><img class="w-7 h-7" src="./assets/mapview.png" alt="">View in map</button>
+                </div>
+                <p class="text-2xl text-[#30343f] mt-5 mb-10">Our offices in NYC</p>
+
+                <div class="flex gap-5 relative">
+                    <img class="rounded-lg w-[630px] object-cover" src="./assets/earth3.jpg" alt="">
+                    <img class="rounded-lg w-[500px] object-cover" src="./assets/earth4.jpg" alt="">
+                   
+                    <button class="w-64 py-3 absolute flex gap-3 items-center justify-start pl-4 bg-white text-[#454955] border rounded-xl text-2xl left-8 top-[340px]"><img class="w-7 h-7" src="./assets/mapview.png" alt="">View in map</button>
+                </div>
+
+                <p class="text-2xl text-[#30343f] mt-5 mb-10">Our offices in UK</p>
+
+            </div>
+
+        </section>
+
+<!-- services  -->
+        <section class="bg-[#eff2f1]">
+            <div class="max-w-6xl mx-auto ">
+
+            </div>
+
+
+        </section>
+
+
+    </div>
+</body>
+
+</html>
