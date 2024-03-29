@@ -5,10 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Layon-Webflow Ecommerce Website</title>
-    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 
     <style>
+        .font-manrope {
+            font-family: "Manrope", sans-serif;
+        }
+
         @keyframes slideLeft {
             0% {
                 transform: translateX(0);
@@ -22,29 +29,27 @@
         .carousel-slider {
             display: flex;
             width: fit-content;
-            /* Ensures the container only takes as much space as needed */
-            animation: slideLeft 20s linear infinite;
+            animation: slideLeft 10s linear infinite;
 
         }
 
         .carousel-slider img {
             flex-shrink: 0;
-            /* Prevent images from shrinking */
-
         }
     </style>
 
 </head>
 
-<body>
+<body class="font-manrope">
 
-    <header class="fixed w-full top-0 z-20 ">
+    <header class="fixed top-0 z-20 w-full  ">
         <!-- navbar  -->
-        <section class="max-w-3xl mx-auto sticky my-5 border rounded-full  bg-white shadow-xl z-10">
-            <nav class=" flex justify-evenly items-center py-2">
-                <img class="h-6" src="./assets/logo.png" alt="">
+        <section
+            class="max-w-sm mx-auto pl-3 pr-3 sticky my-5 border rounded-full  bg-white shadow-xl z-10 md:max-w-3xl md:mx-auto md:pl-0 md:pr-0">
+            <nav class=" flex py-2 justify-between items-center lg:justify-evenly lg:items-center ">
+                <img class="h-5 md:h-6" src="./assets/logo.png" alt="">
 
-                <ul class="flex gap-8 items-center">
+                <ul class="hidden lg:flex gap-8 items-center text-sm">
                     <li>HOME</li>
                     <li>FEATURES</li>
                     <li class="font-medium">ABOUT</li>
@@ -52,11 +57,16 @@
                     <li>SHOP</li>
                 </ul>
 
-                <button class="bg-[#ef476f] text-white rounded-full py-1 px-5 btn">SALES</button>
+                <button
+                    class="hidden lg:bg-[#ef476f] text-white rounded-full py-1 px-5 btn text-sm lg:inline">SALES</button>
 
-                <div class="flex ">
-                    <img class="h-5 w-5" src="./assets/cart.png" alt="">
-                    <button class="bg-black rounded-full text-white px-2 ml-1 btn ">0</button>
+                <div class="flex items-center ">
+                    <img class="h-4 w-4 md:h-5 md:w-5" src="./assets/cart.png" alt="">
+                    <button class="bg-black rounded-full text-white px-1  ml-1 btn md:px-2">0</button>
+
+
+                    <img class="h-4 w-4 inline ml-6 mr-3 md:hidden" src="./assets/menu.png" alt="">
+
                 </div>
 
             </nav>
@@ -69,22 +79,27 @@
         <!-- banner  -->
         <section class="bg-[#eff2f1]">
 
-            <h2 class="text-center text-8xl font-bold pt-44">Resource <span
+
+            <h2 class="text-center  font-bold pt-44 text-5xl pl-3 pr-3 md:text-7xl">Resource <span
                     class="bg-gradient-to-r from-[#ff8800] to-[#ef476f] text-transparent bg-clip-text">sharing</span>
                 <br>
                 within the company
             </h2>
 
-            <p class="text-center text-2xl mt-5 text-[#454955]">Lyon keeps your team&apos;s work on-brand, on message,
+            <p class="text-center mt-5 text-[#454955] text-xl pl-10 pr-10 md:text-2xl ">Lyon keeps your team&apos;s work
+                on-brand, on message,
                 and
                 <br> on time. Innovative features make work feel effortless.
             </p>
 
             <div class="flex justify-center items-center gap-8 mt-12 text-white">
-                <button class="btn bg-gradient-to-b from-[#d62839] to-[#ef476f] rounded-full text-xl py-2 px-5">Talk to
+                <button
+                    class="btn bg-gradient-to-b from-[#d62839] to-[#ef476f] hover:to-[#ef476f] hover:from-[#ef476f]  rounded-full text-xl py-2 px-5">Talk
+                    to
                     Sales</button>
                 <button class="btn bg-black rounded-full text-xl py-2 px-5">Careers</button>
             </div>
+
 
         </section>
 
@@ -94,58 +109,23 @@
             <div class="overflow-hidden relative pt-16 pb-24">
                 <div class="flex items-center gap-10 pt-10 carousel-slider">
                     <!-- img1  -->
-                    <img class="rounded-lg w-96 object-cover" src="./assets/img1.jpg" alt="img1">
+                    <img class="rounded-lg object-cover w-64 lg:w-96 " src="./assets/img1.jpg" alt="img1">
                     <!-- img2  -->
-                    <img class="rounded-lg w-96 h-[410px] object-cover" src="./assets/img2.jpg" alt="img2">
+                    <img class="rounded-lg object-cover w-64 lg:w-96 h-96" src="./assets/img2.jpg" alt="img2">
                     <!-- img3  -->
-                    <img class="rounded-lg w-96 object-cover" src="./assets/img3.jpg" alt="img3">
+                    <img class="rounded-lg object-cover w-64 lg:w-96" src="./assets/img3.jpg" alt="img3">
                     <!-- img4  -->
-                    <img class="rounded-lg w-96 h-[410px] object-cover" src="./assets/img4.jpg" alt="img4">
+                    <img class="rounded-lg object-cover w-64 lg:w-96 h-96" src="./assets/img4.jpg" alt="img4">
                     <!-- img5  -->
-                    <img class="rounded-lg w-96 object-cover" src="./assets/img5.jpg" alt="img5">
+                    <img class="rounded-lg object-cover w-64 lg:w-96" src="./assets/img5.jpg" alt="img5">
                     <!-- img6  -->
-                    <img class="rounded-lg w-96 object-cover" src="./assets/img1.jpg" alt="img1">
+                    <img class="rounded-lg object-cover w-64 lg:w-96" src="./assets/img1.jpg" alt="img1">
                     <!-- img7  -->
-                    <img class="rounded-lg w-96 h-[410px] object-cover" src="./assets/img2.jpg" alt="img2">
+                    <img class="rounded-lg object-cover w-64 lg:w-96" src="./assets/img2.jpg" alt="img2">
 
 
                 </div>
 
-                <!-- <div class="slider">
-                <ul>
-                    <li>
-                        <img class="rounded-lg w-96  object-cover mr-10" src="./assets/img1.jpg" alt="img1">
-                    </li>
-                    <li>
-                        <img class="rounded-lg w-96 object-cover mr-10"  src="./assets/img2.jpg" alt="img2">
-                    </li>
-                    <li>
-                        <img class="rounded-lg w-96  object-cover mr-10"  src="./assets/img3.jpg" alt="img3">
-                    </li>
-                    <li>
-                        <img class="rounded-lg w-96 object-cover mr-10"  src="./assets/img4.jpg" alt="img4">
-                    </li>
-                    <li>
-                        <img class="rounded-lg w-96 object-cover mr-10"  src="./assets/img5.jpg" alt="img5">
-                    </li>
-    
-                    <li>
-                        <img class="rounded-lg w-96 object-cover mr-10" src="./assets/img1.jpg" alt="img1">
-                    </li>
-                    <li>
-                        <img class="rounded-lg w-96 object-cover mr-10"  src="./assets/img2.jpg" alt="img2">
-                    </li>
-                    <li>
-                        <img class="rounded-lg w-96 object-cover mr-10"  src="./assets/img3.jpg" alt="img3">
-                    </li>
-                    <li>
-                        <img class="rounded-lg w-96 object-cover mr-10"  src="./assets/img4.jpg" alt="img4">
-                    </li>
-                    <li>
-                        <img class="rounded-lg w-96 object-cover mr-10"  src="./assets/img5.jpg" alt="img5">
-                    </li>
-                </ul>
-               </div> -->
 
             </div>
 
@@ -154,120 +134,132 @@
         <!-- earth  -->
 
         <section class="bg-[#fdfffc] py-16">
-            <h2 class="font-bold text-6xl text-center text-[#00171f]">We are based on earth</h2>
-            <p class="text-center mt-6 text-[#454955] mb-14">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            <h2 class="font-bold  text-center text-slate-800 text-3xl  md:text-6xl">We are based on earth</h2>
+            <p class="text-center mt-6 text-gray-500 mb-14 font-medium pl-4 pr-4">Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit,
                 sed do eiusmod tempor <br> incididunt ut labore et dolore magna aliqua.</p>
 
-            <div class="max-w-6xl mx-auto ">
-                <div class="flex gap-5 relative">
-                    <img class="rounded-lg w-[500px] object-cover" src="./assets/earth1.jpg" alt="">
-                    <img class="rounded-lg w-[630px] object-cover" src="./assets/earth2.jpg" alt="">
+            <div class=" md:max-w-6xl mx-auto ">
+                <div class="flex flex-col px-5 gap-5 relative md:flex-row">
+                    <img class="rounded-lg object-cover md:w-[500px] " src="./assets/earth1.jpg" alt="">
+                    <img class="rounded-lg object-cover md:w-[630px] " src="./assets/earth2.jpg" alt="">
 
                     <button
-                        class="w-64 py-3 absolute flex gap-3 items-center justify-start pl-4 bg-white text-[#454955] border rounded-xl text-2xl left-[550px] top-[340px]"><img
-                            class="w-7 h-7" src="./assets/mapview.png" alt="">View in map</button>
+                        class=" py-3 absolute flex gap-3 items-center justify-start pl-4 bg-white text-[#454955] border rounded-xl text-2xl w-[374px] top-[520px] left-6 hover:bg-[#e4f0d0] md:w-64 md:left-[550px] md:top-[340px]"><img
+                            class="md:w-7 h-7" src="./assets/mapview.png" alt="">View in map</button>
                 </div>
-                <p class="text-2xl text-[#30343f] mt-5 mb-10">Our offices in NYC</p>
+                <p class="text-2xl text-[#30343f] mt-5 mb-10 pl-5">Our offices in NYC</p>
 
-                <div class="flex gap-5 relative">
-                    <img class="rounded-lg w-[630px] object-cover" src="./assets/earth3.jpg" alt="">
-                    <img class="rounded-lg w-[500px] object-cover" src="./assets/earth4.jpg" alt="">
+                <div class="flex flex-col px-5 gap-5 relative md:flex-row">
+                    <img class="rounded-lg object-cover md:w-[630px] " src="./assets/earth3.jpg" alt="">
+                    <img class="rounded-lg object-cover md:w-[500px] " src="./assets/earth4.jpg" alt="">
 
                     <button
-                        class="w-64 py-3 absolute flex gap-3 items-center justify-start pl-4 bg-white text-[#454955] border rounded-xl text-2xl left-8 top-[340px]"><img
+                        class=" py-3 absolute flex gap-3 items-center justify-start pl-4 bg-white text-[#454955] border rounded-xl text-2xl  w-[374px] top-[520px] left-6 hover:bg-[#e4f0d0] md:w-64 md:left-8 md:top-[340px]"><img
                             class="w-7 h-7" src="./assets/mapview.png" alt="">View in map</button>
                 </div>
 
-                <p class="text-2xl text-[#30343f] mt-5 mb-10">Our offices in UK</p>
+                <p class="text-2xl text-[#30343f] mt-5 mb-10 pl-5">Our offices in UK</p>
 
             </div>
 
         </section>
 
 
-        <section class="bg-[#eff2f1]">
+        <section class=" bg-gray-100">
             <div class="max-w-6xl mx-auto pt-28">
 
                 <!-- services  -->
                 <div>
-                    <h2 class="text-6xl font-medium mb-5">What&apos;s in it for <span
+                    <h2 class="pl-5 text-3xl font-medium  mb-8 md:text-6xl md:font-bold ">What&apos;s in it for <span
                             class="bg-gradient-to-r from-[#ff8800] to-[#ef476f] text-transparent bg-clip-text ">you</span>
                     </h2>
 
-                    <p class="text-[#454955] text-xl mb-10">A job is not just the team you work with and the <br> tasks
+                    <p class="pl-5 mb-14 text-lg text-[#454955] md:text-2xl  ">A job is not just the team you work with
+                        and the <br> tasks
                         you
                         do. It's also all the small things that <br> make you enjoy coming to work every day!</p>
 
-                    <div class="pb-10 grid grid-cols-4 gap-9">
+                    <div class="pb-10 grid grid-cols-1 gap-9 pl-5 md:grid-cols-2 lg:grid-cols-4 ">
                         <!-- card 1  -->
-                        <div class="bg-white rounded-lg flex justify-center items-center border gap-2 w-[260px] h-28">
+                        <div
+                            class="bg-white rounded-2xl flex flex-col justify-center items-center border gap-2 w-96 h-36 md:w-[260px] md:flex-row  md:h-28">
                             <img class="w-14 h-14" src="./assets/clock.png" alt="">
-                            <p class="text-[#454955] font-medium">Flexible working <br> hours</p>
+                            <p class="text-[#454955] font-medium md:block">Flexible working <span class="hidden lg:inline"> <br> </span> hours</p>
                         </div>
 
                         <!-- card 2 -->
-                        <div class="bg-white rounded-lg flex justify-center items-center border gap-2 w-[260px] h-28">
+                        <div
+                            class="bg-white rounded-2xl flex flex-col justify-center items-center border gap-2 w-96 h-36 md:w-[260px] md:flex-row  md:h-28">
                             <img class="w-14 h-14" src="./assets/beg.png" alt="">
-                            <p class="text-[#454955] font-medium">Work from home <br> options</p>
+                            <p class="text-[#454955] font-medium md:block">Work from home <span class="hidden md:inline"> <br> </span> options</p>
                         </div>
 
                         <!-- card 3  -->
-                        <div class="bg-white rounded-lg flex justify-center items-center border gap-2 w-[260px] h-28">
+                        <div
+                            class="bg-white rounded-2xl flex flex-col justify-center items-center border gap-2 w-96 h-36 md:w-[260px] md:flex-row  md:h-28">
                             <img class="w-14 h-14" src="./assets/hand.png" alt="">
-                            <p class="text-[#454955] font-medium">Activity area <br> (pool , games..)</p>
+                            <p class="text-[#454955] font-medium md:block">Activity area <span class="hidden md:inline"> <br> </span> (pool , games..)</p>
                         </div>
 
                         <!-- card 4  -->
-                        <div class="bg-white rounded-lg flex justify-center items-center border gap-2 w-[260px] h-28">
+                        <div
+                            class="bg-white rounded-2xl flex flex-col justify-center items-center border gap-2 w-96 h-36 md:w-[260px] md:flex-row  md:h-28">
                             <img class="w-14 h-14" src="./assets/dot.png" alt="">
-                            <p class="text-[#454955] font-medium">Personal <br> development</p>
+                            <p class="text-[#454955] font-medium md:block">Personal <span class="hidden md:inline"> <br> </span> development</p>
                         </div>
 
                         <!-- card 5  -->
-                        <div class="bg-white rounded-lg flex justify-center items-center border gap-2 w-[260px] h-28">
+                        <div
+                            class="bg-white rounded-2xl flex flex-col justify-center items-center border gap-2 w-96 h-36 md:w-[260px] md:flex-row  md:h-28">
                             <img class="w-14 h-14" src="./assets/love.png" alt="">
                             <p class="text-[#454955] font-medium">Healthy snacks</p>
                         </div>
 
                         <!-- card 6  -->
-                        <div class="bg-white rounded-lg flex justify-center items-center border gap-2 w-[260px] h-28">
+                        <div
+                            class="bg-white rounded-2xl flex flex-col justify-center items-center border gap-2 w-96 h-36 md:w-[260px] md:flex-row  md:h-28">
                             <img class="w-14 h-14" src="./assets/mike.png" alt="">
                             <p class="text-[#454955] font-medium">In office party</p>
                         </div>
 
                         <!-- card 7  -->
-                        <div class="bg-white rounded-lg flex justify-center items-center border gap-2 w-[260px] h-28">
+                        <div
+                            class="bg-white rounded-2xl flex flex-col justify-center items-center border gap-2 w-96 h-36 md:w-[260px] md:flex-row  md:h-28">
                             <img class="w-14 h-14" src="./assets/dumble.png" alt="">
-                            <p class="text-[#454955] font-medium">Wellness <br> programme</p>
+                            <p class="text-[#454955] font-medium md:block">Wellness <span class="hidden md:inline"> <br> </span> programme</p>
                         </div>
 
                         <!-- card 8  -->
-                        <div class="bg-white rounded-lg flex justify-center items-center border gap-2 w-[260px] h-28">
+                        <div
+                            class="bg-white rounded-2xl flex flex-col justify-center items-center border gap-2 w-96 h-36 md:w-[260px] md:flex-row  md:h-28">
                             <img class="w-14 h-14" src="./assets/colour.png" alt="">
-                            <p class="text-[#454955] font-medium">Hands-on <br> learning</p>
+                            <p class="text-[#454955] font-medium md:block">Hands-on <span class="hidden md:inline"> <br> </span> learning</p>
                         </div>
                     </div>
 
-                    <img class="w-full object-cover rounded-xl" src="./assets/service.jpg" alt="">
+                    <img class=" object-cover rounded-xl pl-5 pr-5 md:w-full " src="./assets/service.jpg" alt="">
                 </div>
             </div>
 
 
         </section>
 
-        <section class="bg-gradient-to-b from-[#eff2f1] to-[#fdfffc] pt-20">
+        <section class="bg-gradient-to-b from-gray-100 to-[#fdfffc] pt-20">
             <div class="max-w-6xl mx-auto">
                 <!-- job openning  -->
-                <div class="flex justify-between pb-48 ">
+                <div class="flex pb-48 flex-col  md:justify-between md:flex-row ">
                     <div>
-                        <h2 class="text-6xl font-medium mb-5">Job openings</h2>
-                        <p class="text-[#454955] text-2xl mb-10">Lorem ipsum dolor sit amet, consectetur <br> adipiscing
+                        <h2 class=" mb-5 text-5xl text-gray-500 pl-5 md:text-6xl font-medium md:text-black ">Job
+                            openings</h2>
+                        <p class="text-[#454955]  mb-10 pl-5 text-xl md:text-2xl">Lorem ipsum dolor sit amet, consectetur <br>
+                            adipiscing
                             elit, sed do eiusmod tempor <br> incididunt ut labore.</p>
                     </div>
 
-                    <div class="flex flex-col gap-5">
+                    <div class="flex flex-col gap-5 ml-5">
                         <div class="rounded-xl p-[3px] bg-gradient-to-r from-[#ff8800] to-[#ef476f]">
-                            <div class="bg-white   px-7 py-10 w-[550px] rounded-xl">
+                            <div class="bg-white px-7 py-8 rounded-xl w-96 md:w-[560px]">
 
                                 <div class="flex justify-between rounded-xl">
                                     <div>
@@ -281,7 +273,7 @@
                         </div>
 
                         <div class="rounded-xl p-[3px] bg-gradient-to-r from-[#ff8800] to-[#ef476f]">
-                            <div class="bg-white   px-7 py-10 w-[550px] rounded-xl">
+                            <div class="bg-white   px-7 py-8 rounded-xl w-96 md:w-[560px]">
 
                                 <div class="flex justify-between rounded-xl">
                                     <div>
@@ -299,14 +291,15 @@
 
                 <!-- download option -->
 
-                <div class="rounded-[65px]  w-full bg-black pl-16">
+                <div class=" rounded-xl w-full bg-black pl-10 relative h-[950px] md:pl-16 md:rounded-[65px] md:h-auto">
                     <div class="pt-28">
                         <h2 class="text-6xl font-medium text-white mb-4">See if Lyon is <br> right for you</h2>
 
-                        <p class="text-white  mt-10 ">In just 30 days, our finance mobile app <br> offers unparalleled
+                        <p class="text-gray-300  mt-10 ">In just 30 days, our finance mobile app <br> offers
+                            unparalleled
                             precision in identifying <br> crucial market trends and opportunities.</p>
 
-                        <div class="mt-14 flex gap-5 pb-28">
+                        <div class="mt-14 flex gap-5 pb-24">
                             <button
                                 class="btn bg-gradient-to-b from-[#d62839] to-[#ef476f] hover:to-[#ef476f] hover:from-[#ef476f] rounded-full text-xl py-2 px-5 flex justify-center items-center gap-1 text-white">
                                 <img class="w-5 h-5" src="./assets/icons8-download-48.png" alt="">IOS</button>
@@ -317,9 +310,10 @@
                         </div>
                     </div>
 
-                    <div>
-                        <button class="rounded-full w-60 bg-pink-900"></button>
-                    </div>
+                    <img class="hidden md:absolute left-[647px] bottom-0 h-[539px] md:inline"
+                        src="./assets/download.png" alt="">
+
+                    <img class="absolute left-0 w-full inline md:hidden" src="./assets/downloadsmall.png" alt="">
 
                 </div>
             </div>
@@ -329,20 +323,24 @@
 
     <footer class="bg-white">
 
-        <div class="max-w-6xl mx-auto">
+        <div class="md:max-w-6xl mx-auto">
 
-            <div class="pt-48 flex  justify-between items-start">
+            <div class="pt-48 flex flex-col pl-5 md:flex-row justify-between items-start">
                 <div>
                     <img class=" h-10 object-cover" src="./assets/logo.png" alt="">
-                    <h2 class="text-6xl font-medium  mt-10 mb-7">Subscribe to <br> the newsletter</h2>
+                    <h2 class=" font-medium  mt-10 mb-7 text-2xl md:text-6xl">Subscribe to <br> the newsletter</h2>
 
                     <div class="relative">
-                        <input class="rounded-full w-[470px] bg-[#dbdbdb] py-3 px-5" type="text" name="" id=""
-                            placeholder="Enter Your Email">
+                        <input class="rounded-full  bg-[#dbdbdb] py-3 px-5 w-[374px] md:w-[470px]" type="text" name=""
+                            id="" placeholder="Enter Your Email">
 
                         <button
-                            class="btn absolute left-[303px] top-1 bg-gradient-to-b from-[#d62839] to-[#ef476f] hover:to-[#ef476f] hover:from-[#ef476f]  rounded-full text-xl py-2 px-5 text-white">Start
+                            class="btn absolute w-44  bg-gradient-to-b from-[#d62839] to-[#ef476f] hover:to-[#ef476f] hover:from-[#ef476f]  rounded-full text-xl py-2 px-5 text-white hidden md:left-[292px] top-1 md:inline">Start
                             Free Trial</button>
+
+                        <button class="bg-[#ef476f] rounded-full p-2 absolute right-1 inline md:hidden">
+                            <img class="w-7 h-7" src="./assets/send.png" alt="">
+                        </button>
                     </div>
 
                     <div class="flex justify-start items-center gap-7 py-10">
@@ -391,10 +389,17 @@
 
             <hr>
 
-            <div class="pb-28 pt-6 flex justify-between items-center">
-                <p class="flex justify-center items-center"> <span class="text-gray-500 mr-1">© 2024 - Made with ❤️ by</span> Azwedo <img class="w-4 h-4" src="./assets/icons8-external-link-240.png" alt="">& Wedoflow <img class="w-4 h-4" src="./assets/icons8-external-link-240.png" alt=""></p>
+            <div class="pb-28 pt-6 flex flex-col pl-5 justify-start it md:flex-row md:justify-between md:items-center">
+                <p class="flex  items-center text-sm md:text-base "> <span class="text-gray-500 mr-1">© 2024 - Made with
+                        ❤️ by</span> <span class="hover:text-[#d62839]">Azwedo</span> <img class="w-4 h-4 mr-1"
+                        src="./assets/icons8-external-link-240.png" alt="">&
+                    <span class="hover:text-[#d62839]">Wedoflow</span> <img class="w-4 h-4"
+                        src="./assets/icons8-external-link-240.png" alt="">
+                </p>
 
-                <p class="flex justify-center items-center"> <span class="text-gray-500 mr-1">Powered by</span> Webflow <img class="w-4 h-4" src="./assets/icons8-external-link-240.png" alt=""></p>
+                <p class="flex  items-center text-sm md:text-base hover:text-[#d62839]"> <span
+                        class="text-gray-500 mr-1">Powered by</span>
+                    Webflow <img class="w-4 h-4" src="./assets/icons8-external-link-240.png" alt=""></p>
             </div>
 
         </div>
